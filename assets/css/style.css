@@ -1,0 +1,78 @@
+/*@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+ {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align:center;
+}
+
+.container{
+  background: grey;
+  max-width: 600px;
+  height: 500px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+h1 + p {
+	margin-bottom: 5%;
+    color: #3498db;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+
+  background: #B0A084;
+  color: $text-color;
+  font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+  font-size: 18px;
+}
+
+
+button {
+   border: none;
+  background-color: #FF7373;
+  box-shadow: 0px 5px 0px 0px #CE4646;
+  outline: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 22px;
+  text-decoration: none;
+  margin: 20px;
+  color: #fff;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+button:active {
+  transform: translate(0px, 5px);
+  -webkit-transform: translate(0px, 5px);
+  box-shadow: 0px 1px 0px 0px;
+}
+
+#horse{
+margin-left: 0px;
+align:left;
+}
+
+#grass{
+
+}
+
+/*body{
+  background-color:;
+}*/
+
+/*object{
+  /*visibility: hidden;
+}*/
+
+.bg {
+  background-color: #04AF71;
+}
