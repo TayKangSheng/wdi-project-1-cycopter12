@@ -1,42 +1,38 @@
-/*@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
-
- {
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+*{
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
-  text-align:center;
 }
 
-.container{
-  background: grey;
-  max-width: 600px;
-  height: 500px;
+.container {
+  background: #F9DBBD;
+  max-width: 650px;
+  height: 550px;
   width: 100%;
   margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-
 }
 
-h1 + p {
-	margin-bottom: 5%;
-    color: #3498db;
+h1 {
+  color: red;
+  text-align: center;
+  font-family: 'Sansita', sans-serif;
 }
 
-html, body {
-  margin: 0;
-  padding: 0;
-
-  background: #B0A084;
-  color: $text-color;
-  font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
-  font-size: 18px;
+p {
+  margin: 0 auto;
+  color: #235789;
+  text-align: center;
+  font-size: 30px
 }
 
+.wrapperBtn {
+  text-align: center;
+}
 
 button {
-   border: none;
-  background-color: #FF7373;
+  border: none;
+  background-color: #DA627D;
   box-shadow: 0px 5px 0px 0px #CE4646;
   outline: none;
   border-radius: 5px;
@@ -56,23 +52,47 @@ button:active {
   box-shadow: 0px 1px 0px 0px;
 }
 
-#horse{
-margin-left: 0px;
-align:left;
+html, body {
+  margin: 0;
+  padding: 0;
+  background-image: url(horses-380399_1920.jpg);
+  font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+  font-size: 18px;
 }
 
-#grass{
-
+.scoreBox {
+  float: left;
+  font-size: 30px
 }
 
-/*body{
-  background-color:;
-}*/
+.timeBox {
+  float: right;
+  font-size: 30px
+}
 
-/*object{
-  /*visibility: hidden;
-}*/
+.wordsBox {
+  margin-top: 150px;
+  text-align: center;
+  border: 5px solid black;
+}
+
+.horses {
+  background-image: url(https://static1.squarespace.com/static/5181d5b7e4b07b8c66ed5614/t/52155709e4b069b81518e685/1377130252807/grass.png);
+  position: relative;
+  display:flex;
+  margin-top: 50px
+}
+
+#horse {
+  margin-left: 0px;
+  position: relative;
+}
+
+object {
+  visibility: hidden;
+}
 
 .bg {
   background-color: #04AF71;
+  opacity: .6
 }
