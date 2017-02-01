@@ -37,6 +37,8 @@ window.addEventListener('DOMContentLoaded', function () {
       setTimeout(updateTimer, 1000)
     }
   }
+var reset = document.querySelector('.restart')
+  reset.addEventListener('click', function(){location.reload()})
 
   function newWord () {
     words.innerHTML = ''
@@ -93,14 +95,12 @@ window.addEventListener('DOMContentLoaded', function () {
       global_c = 0
       points++ // increment the points
       score.innerHTML = points // add points to the points div
-      document.removeEventListener('keydown', keyCheck, false)
       setTimeout(function () {
         words.className = 'words' // restart the classes
         newWord() // give another word
-        document.addEventListener('keydown', keyCheck, false)
-      }, 400)
+        document.addEventListener('keydown', keyCheck)
+      }, 200)
     }
   }
-
-  document.addEventListener('keydown', keyCheck, false)
+  document.addEventListener('keydown', keyCheck)
 })
