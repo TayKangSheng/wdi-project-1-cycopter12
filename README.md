@@ -5,12 +5,17 @@
 
 [Rapid Typer Demo](https://wdi-sg.github.io/wdi-project-1-cycopter12/)
 
+### WDI Project 1
+Room for growth
+
 ### Guide:
 * Rapid typer is a game to test the player's typing speed on a designated time before it runs out.
 
-* Player will earn a point for every correct word typed.
+* Player will earn a point for every correct word typed. Correct letters entered will be highlighted.
 
 * If player types a wrong letter, the error count will increase.
+
+* Once the timer is over, game will reset.
 
 
 ### Controls:
@@ -29,3 +34,5 @@ Andre Mark The
 * Credit goes to current online multiplayer game, "Type Racer" for inspiration
 
 * Pixabay for horse images
+
+* Javascript MDN Website

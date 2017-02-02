@@ -26,10 +26,6 @@ p {
   font-size: 30px
 }
 
-.wrapperBtn {
-  text-align: center;
-}
-
 button {
   border: none;
   background-color: #DA627D;
@@ -60,6 +56,14 @@ html, body {
   font-size: 18px;
 }
 
+object {
+  visibility: hidden;
+}
+
+.wrapperBtn {
+  text-align: center;
+}
+
 .scoreBox {
   float: left;
   font-size: 30px
@@ -86,10 +90,6 @@ html, body {
 #horse {
   margin-left: 0px;
   position: relative;
-}
-
-object {
-  visibility: hidden;
 }
 
 .bg {

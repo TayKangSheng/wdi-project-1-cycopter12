@@ -7,10 +7,10 @@ function overAll () {
   var reset = document.querySelector('.restart')
   var allWords
   var typed
-  var seconds = 30
+  var seconds = 2
   var points = 0
-  var error_c = 0 //counts the errors
-  var global_c = 0 //counts the letters of a word.
+  var error_c = 0 // counts the errors
+  var global_c = 0 // counts the letters of a word.
 
   reset.addEventListener('click', function () { location.reload() })
 
@@ -18,11 +18,6 @@ function overAll () {
     'pettishness', 'gangliest', 'saehrimnir', 'gnosticiser', 'circumambience', 'catching', 'precharted', 'permanganic', 'nondivulgence', 'claystone', 'crownpiece', 'alorton', 'predoubt', 'confetti', 'evanescing', 'tenner', 'overaffliction', 'realize', 'ossian',
     'sakhalin', 'eclamptic', 'goldarnedest', 'primine', 'habitacle', 'cogitate', 'transiently', 'interaxis', 'resuit', 'gastrocnemius', 'taking', 'unopted', 'appealer', 'azbine', 'phosphocreatine', 'nalchik', 'gentilesse'
   ]
-
-  // function countDown () {
-  //   points = 0
-  //   setTimeout(updateTimer, 1000)
-  // }
 
   function updateTimer () {
     button.disabled = true
@@ -32,11 +27,8 @@ function overAll () {
       alert('Time is Up! Here is your Score ' + points + '. You commited ' + error_c + ' errors.')
       words.innerHTML = ''
       location.reload()
-      button.disabled = false
-      timerId.innerHTML = '30'
-      // clearInterval( startIn)
-      seconds = 30
-      button.disabled = false
+      // timerId.innerHTML = '30'
+      // seconds = 30
     } else {
       setTimeout(updateTimer, 1000)
     }
@@ -59,11 +51,12 @@ function overAll () {
     }
     allWords = randomWord
   }
+
   button.addEventListener('click', function (e) {
-    updateTimer()
-    newWord()
-    button.disabled = true
-  })
+      updateTimer()
+      newWord()
+      button.disabled = true
+    })
 
   function keyCheck (e) {
     // typed = keydown character.toLowerCase
@@ -75,6 +68,7 @@ function overAll () {
       //    global counter ++
       // else
       //    error
+
 
     typed = String.fromCharCode(e.which).toLowerCase()
     // word -> element with class .words -> p dom element
@@ -90,7 +84,6 @@ function overAll () {
     var margin1 = points * 30
     var horsey = document.getElementById('horse')
     horsey.style.marginLeft = margin1 + 'px'
-    console.log(margin1)
 
     if (global_c === allWords.length) { // animate character
       global_c = 0
@@ -105,10 +98,11 @@ function overAll () {
   }
   document.addEventListener('keydown', keyCheck)
 
-  return
-  updateTimer:updateTimer
-  newWord:newWord
-  keyCheck:keyCheck
+  return {
+    updateTimer:updateTimer,
+    newWord:newWord,
+    keyCheck:keyCheck
+  }
 }
 
 window.addEventListener('DOMContentLoaded', function () {
