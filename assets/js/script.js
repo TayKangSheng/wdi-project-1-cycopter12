@@ -7,7 +7,7 @@ function overAll () {
   var reset = document.querySelector('.restart')
   var allWords
   var typed
-  var seconds = 2
+  var seconds = 60
   var points = 0
   var error_c = 0 // counts the errors
   var global_c = 0 // counts the letters of a word.
@@ -18,6 +18,10 @@ function overAll () {
     'pettishness', 'gangliest', 'saehrimnir', 'gnosticiser', 'circumambience', 'catching', 'precharted', 'permanganic', 'nondivulgence', 'claystone', 'crownpiece', 'alorton', 'predoubt', 'confetti', 'evanescing', 'tenner', 'overaffliction', 'realize', 'ossian',
     'sakhalin', 'eclamptic', 'goldarnedest', 'primine', 'habitacle', 'cogitate', 'transiently', 'interaxis', 'resuit', 'gastrocnemius', 'taking', 'unopted', 'appealer', 'azbine', 'phosphocreatine', 'nalchik', 'gentilesse'
   ]
+
+//create gameStart function
+// inside gameStart i will need to initalizae the game with functions of updateTimer and newWords
+
 
   function updateTimer () {
     button.disabled = true
@@ -68,8 +72,6 @@ function overAll () {
       //    global counter ++
       // else
       //    error
-
-
     typed = String.fromCharCode(e.which).toLowerCase()
     // word -> element with class .words -> p dom element
     var whatWeWant = words.querySelectorAll('.wordsCharacter')[global_c] // array of spans
@@ -81,6 +83,7 @@ function overAll () {
       error.innerHTML = error_c
     }
   // animation for horse movement
+
     var margin1 = points * 30
     var horsey = document.getElementById('horse')
     horsey.style.marginLeft = margin1 + 'px'
