@@ -7,7 +7,7 @@ function overAll () {
   var reset = document.querySelector('.restart')
   var allWords
   var typed
-  var seconds = 60
+  var seconds = 30
   var points = 0
   var error_c = 0 // counts the errors
   var global_c = 0 // counts the letters of a word.
