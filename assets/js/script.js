@@ -1,15 +1,18 @@
-window.addEventListener('DOMContentLoaded', function () {
+function overAll () {
   var words = document.querySelector('.words')
   var score = document.querySelector('.score')
   var timerId = document.querySelector('.time')
   var button = document.querySelector('.btn')
   var error = document.querySelector('.error')
+  var reset = document.querySelector('.restart')
   var allWords
   var typed
   var seconds = 30
   var points = 0
   var error_c = 0
   var global_c = 0
+
+  reset.addEventListener('click', function () { location.reload() })
 
   var list = ['chlordiazepoxide', 'jimmy', 'symmachus', 'picker', 'treelessness',
     'pettishness', 'gangliest', 'saehrimnir', 'gnosticiser', 'circumambience', 'catching', 'precharted', 'permanganic', 'nondivulgence', 'claystone', 'crownpiece', 'alorton', 'predoubt', 'confetti', 'evanescing', 'tenner', 'overaffliction', 'realize', 'ossian',
@@ -37,8 +40,6 @@ window.addEventListener('DOMContentLoaded', function () {
       setTimeout(updateTimer, 1000)
     }
   }
-var reset = document.querySelector('.restart')
-  reset.addEventListener('click', function(){location.reload()})
 
   function newWord () {
     words.innerHTML = ''
@@ -57,7 +58,6 @@ var reset = document.querySelector('.restart')
     }
     allWords = randomWord
   }
-
   button.addEventListener('click', function (e) {
     updateTimer()
     newWord()
@@ -103,4 +103,14 @@ var reset = document.querySelector('.restart')
     }
   }
   document.addEventListener('keydown', keyCheck)
+
+  return
+  updateTimer:updateTimer
+  newWord:newWord
+  keyCheck:keyCheck
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+  var horse = overAll()
+  horse.eventListener()
 })
