@@ -9,8 +9,8 @@ function overAll () {
   var typed
   var seconds = 30
   var points = 0
-  var error_c = 0
-  var global_c = 0
+  var error_c = 0 //counts the errors
+  var global_c = 0 //counts the letters of a word.
 
   reset.addEventListener('click', function () { location.reload() })
 
@@ -31,6 +31,7 @@ function overAll () {
     if (seconds === 0) {
       alert('Time is Up! Here is your Score ' + points + '. You commited ' + error_c + ' errors.')
       words.innerHTML = ''
+      location.reload()
       button.disabled = false
       timerId.innerHTML = '30'
       // clearInterval( startIn)
@@ -111,6 +112,5 @@ function overAll () {
 }
 
 window.addEventListener('DOMContentLoaded', function () {
-  var horse = overAll()
-  horse.eventListener()
+  overAll()
 })
